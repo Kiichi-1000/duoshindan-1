@@ -254,6 +254,8 @@ export default defineConfig({
 		},
 	},
 	build: {
+		outDir: 'dist',
+		assetsDir: 'assets',
 		rollupOptions: {
 			external: [
 				'@babel/parser',
@@ -262,5 +264,6 @@ export default defineConfig({
 				'@babel/types'
 			]
 		}
-	}
+	},
+	base: '/'
 });

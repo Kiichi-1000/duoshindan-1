@@ -25,7 +25,7 @@ function App() {
             "@type": "WebApplication",
             "name": "距離感診断",
             "description": "30問の質問で二人の距離感と相性を診断する無料ペア診断サイト",
-            "url": "https://yourdomain.com/",
+            "url": "https://duoshindan-1.pages.dev/",
             "applicationCategory": "UtilityApplication",
             "operatingSystem": "Web Browser",
             "offers": {

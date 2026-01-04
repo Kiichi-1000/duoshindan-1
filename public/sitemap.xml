@@ -6,7 +6,7 @@
   
   <!-- トップページ - 距離感診断 -->
   <url>
-    <loc>https://yourdomain.com/</loc>
+    <loc>https://duoshindan-1.pages.dev/</loc>
     <lastmod>2024-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,7 +14,7 @@
   
   <!-- タイプ別解説ページ - ペアタイプ -->
   <url>
-    <loc>https://yourdomain.com/note</loc>
+    <loc>https://duoshindan-1.pages.dev/note</loc>
     <lastmod>2024-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -22,7 +22,7 @@
   
   <!-- FAQページ -->
   <url>
-    <loc>https://yourdomain.com/faq</loc>
+    <loc>https://duoshindan-1.pages.dev/faq</loc>
     <lastmod>2024-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

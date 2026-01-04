@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://duoshindan-1.pages.dev/sitemap.xml
 
 # Disallow private pages (if any)
 # Disallow: /private/
