@@ -1,0 +1,11 @@
+# Cloudflare Pages / Netlify-style redirects
+# 静的アセットはそのまま配信し、それ以外はSPAとして index.html にフォールバック
+
+/assets/*  /assets/:splat  200
+/favicon.svg  /favicon.svg  200
+/robots.txt  /robots.txt  200
+/sitemap.xml  /sitemap.xml  200
+
+/*  /index.html  200
+
+
