@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Heart, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { pairTypes } from '@/data/pairTypes';
 
 const Header = () => {
   const location = useLocation();
@@ -84,6 +85,23 @@ const Header = () => {
                   {item.label}
                 </Link>
               ))}
+            </div>
+
+            {/* Noteページ内アンカーリンク（タイプ別解説へのショートカット） */}
+            <div className="mt-6 pt-4 border-t border-purple-100">
+              <p className="text-xs font-bold text-gray-500 mb-3">ペアタイプ一覧</p>
+              <div className="grid grid-cols-2 gap-x-4 gap-y-2">
+                {pairTypes.map((t) => (
+                  <Link
+                    key={t.id}
+                    to={`/note#type-${t.id}`}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="text-sm text-gray-600 hover:text-purple-600 transition-colors"
+                  >
+                    {t.name}
+                  </Link>
+                ))}
+              </div>
             </div>
           </motion.div>
         )}

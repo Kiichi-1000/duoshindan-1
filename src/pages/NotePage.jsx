@@ -1,9 +1,9 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Header from '@/components/Header';
@@ -11,6 +11,23 @@ import Footer from '@/components/Footer';
 import { pairTypes } from '@/data/pairTypes';
 
 const NotePage = () => {
+  const location = useLocation();
+
+  // /note#type-◯ のようなハッシュ遷移で、該当カードへ自動スクロール
+  useEffect(() => {
+    const hash = location.hash;
+    if (!hash) return;
+
+    const id = hash.replace('#', '');
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    // Headerがfixedなので少し待ってからスクロール
+    setTimeout(() => {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  }, [location.hash]);
+
   return (
     <>
       <Helmet>
@@ -43,7 +60,7 @@ const NotePage = () => {
       <div className="min-h-screen bg-gray-50">
         <Header />
         
-        <div className="pt-24 pb-16 px-4 max-w-4xl mx-auto">
+        <div id="note-top" className="pt-24 pb-16 px-4 max-w-4xl mx-auto">
           <div className="mb-8 flex items-center gap-4">
              <Link to="/result">
                <Button variant="ghost" size="icon"><ArrowLeft className="w-6 h-6" /></Button>
@@ -60,6 +77,7 @@ const NotePage = () => {
             {pairTypes.map((type, index) => (
               <motion.div 
                 key={type.id}
+                id={`type-${type.id}`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
