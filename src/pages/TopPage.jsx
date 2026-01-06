@@ -69,6 +69,18 @@ const TopPage = () => {
     navigate('/diagnosis/b');
   };
 
+  // 「今すぐ診断を始める」ボタン：トップページ内の質問1へ移動
+  const handleJumpToQuestion1 = () => {
+    // ヒーロー直下の質問セクションへスムーズスクロール
+    const el = document.getElementById('question-1');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
+    // 念のためフォールバック（質問要素が見つからない場合）
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const isB = !!partnerData;
   const allPreviewAnswered = previewQuestions.every(q => previewAnswers[q.id] !== undefined && previewAnswers[q.id] !== null);
 
@@ -143,10 +155,9 @@ const TopPage = () => {
                 </p>
                 {!isB && (
                   <Button 
-                    onClick={handleStartAsA}
+                    onClick={handleJumpToQuestion1}
                     size="lg"
                     className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white px-8 py-6 text-lg rounded-full shadow-lg"
-                    disabled={!allPreviewAnswered}
                   >
                     今すぐ診断を始める
                     <ArrowRight className="ml-2 w-5 h-5" />
