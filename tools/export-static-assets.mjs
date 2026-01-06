@@ -57,6 +57,10 @@ if (cssPath) {
 if (fs.existsSync('public/favicon.svg')) copyFile('public/favicon.svg', 'favicon.svg');
 if (fs.existsSync('public/robots.txt')) copyFile('public/robots.txt', 'robots.txt');
 if (fs.existsSync('public/sitemap.xml')) copyFile('public/sitemap.xml', 'sitemap.xml');
+if (fs.existsSync('public/site.webmanifest')) copyFile('public/site.webmanifest', 'site.webmanifest');
+if (fs.existsSync('public/favicon-16x16.png')) copyFile('public/favicon-16x16.png', 'favicon-16x16.png');
+if (fs.existsSync('public/favicon-32x32.png')) copyFile('public/favicon-32x32.png', 'favicon-32x32.png');
+if (fs.existsSync('public/apple-touch-icon.png')) copyFile('public/apple-touch-icon.png', 'apple-touch-icon.png');
 
 // images をルート直下へもコピー（ビルド成果物が配信されない環境対策）
 const publicImagesDir = path.resolve('public/images');
