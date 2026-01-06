@@ -8,6 +8,11 @@
   Content-Type: image/svg+xml; charset=utf-8
 
 /*
+  # HTMLも含め、更新が即時反映されるようにキャッシュを抑制（白画面調査中のため）
+  Cache-Control: no-store
+  X-Robots-Tag: index, follow
+
+/*
   X-Content-Type-Options: nosniff
 
 
