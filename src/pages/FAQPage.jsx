@@ -58,7 +58,7 @@ const FAQPage = () => {
       <Helmet>
         <title>よくある質問（FAQ） | 距離感診断 - よくある質問と回答</title>
         <meta name="description" content="距離感診断に関するよくある質問と回答。診断の使い方、プライバシー、結果の見方など、よくある質問にお答えします。" />
-        <meta name="keywords" content="距離感診断,FAQ,よくある質問,ペア診断,使い方" />
+        <meta name="keywords" content="距離感診断,FAQ,よくある質問,ペア診断,仲良さ診断,使い方" />
         
         {/* Open Graph */}
         <meta property="og:title" content="よくある質問（FAQ） | 距離感診断" />
@@ -90,7 +90,7 @@ const FAQPage = () => {
         <div className="pt-24 pb-16 px-4 max-w-2xl mx-auto">
           <h1 className="text-3xl font-bold mb-4 text-center text-gray-900">よくある質問（FAQ）</h1>
           <p className="text-center text-gray-600 mb-8">
-            距離感診断・ペア診断・ペアタイプ診断に関するよくある質問と回答をまとめました。
+            距離感診断・ペア診断・仲良さ診断に関するよくある質問と回答をまとめました。
           </p>
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, i) => (

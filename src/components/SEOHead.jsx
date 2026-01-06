@@ -15,7 +15,7 @@ const SEOHead = ({
   structuredData
 }) => {
   const siteUrl = typeof window !== 'undefined' ? window.location.origin : 'https://yourdomain.com';
-  const defaultKeywords = '距離感診断,ペア診断,ペアタイプ,相性診断,関係性診断,カップル診断,友達診断,距離感,心の距離,相性,ペア,診断,無料';
+  const defaultKeywords = '距離感診断,ペア診断,仲良さ診断,相性診断,関係性診断,カップル診断,友達診断,距離感,心の距離,相性,ペア,診断,無料,仲良し度';
   const defaultOgImage = `${siteUrl}/og-image.jpg`;
   
   const finalKeywords = keywords ? `${defaultKeywords},${keywords}` : defaultKeywords;

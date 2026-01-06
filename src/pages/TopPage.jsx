@@ -88,8 +88,8 @@ const TopPage = () => {
     <>
       <Helmet>
         <title>距離感診断 | 二人の心の距離を0〜100で見える化 - 無料ペア診断</title>
-        <meta name="description" content="30問の質問で二人の距離感と相性を診断！Z世代向けの無料ペア診断サイト。カップルや友達同士で使える、距離感診断・ペア診断・ペアタイプ診断。診断結果は10段階のペアタイプで表示されます。" />
-        <meta name="keywords" content="距離感診断,ペア診断,ペアタイプ,相性診断,関係性診断,カップル診断,友達診断,距離感,心の距離,相性,ペア,診断,無料" />
+        <meta name="description" content="30問の質問で二人の距離感と相性を診断！Z世代向けの無料ペア診断サイト。カップルや友達同士で使える、距離感診断・ペア診断・仲良さ診断。診断結果は10段階のペアタイプで表示されます。" />
+        <meta name="keywords" content="距離感診断,ペア診断,仲良さ診断,相性診断,関係性診断,カップル診断,友達診断,距離感,心の距離,相性,ペア,診断,無料,仲良し度" />
         
         {/* Open Graph */}
         <meta property="og:title" content="距離感診断 | 二人の心の距離を0〜100で見える化" />
@@ -114,8 +114,8 @@ const TopPage = () => {
             "@context": "https://schema.org",
             "@type": "WebApplication",
             "name": "距離感診断",
-            "alternateName": ["ペア診断", "ペアタイプ診断"],
-            "description": "30問の質問で二人の距離感と相性を診断する無料ペア診断サイト。カップルや友達同士で使える距離感診断・ペア診断・ペアタイプ診断。",
+            "alternateName": ["ペア診断", "仲良さ診断"],
+            "description": "30問の質問で二人の距離感と相性を診断する無料ペア診断サイト。カップルや友達同士で使える距離感診断・ペア診断・仲良さ診断。",
             "url": typeof window !== 'undefined' ? window.location.origin : 'https://yourdomain.com',
             "applicationCategory": "UtilityApplication",
             "operatingSystem": "Web Browser",
@@ -124,7 +124,7 @@ const TopPage = () => {
               "price": "0",
               "priceCurrency": "JPY"
             },
-            "keywords": "距離感診断,ペア診断,ペアタイプ,相性診断,関係性診断,カップル診断,友達診断",
+            "keywords": "距離感診断,ペア診断,仲良さ診断,相性診断,関係性診断,カップル診断,友達診断",
             "audience": {
               "@type": "Audience",
               "audienceType": "Gen Z"
@@ -151,7 +151,7 @@ const TopPage = () => {
                   二人の"近さ"を0〜100で見える化
                 </p>
                 <p className="text-gray-500 text-sm md:text-base mb-8 max-w-2xl mx-auto">
-                  無料ペア診断・ペアタイプ診断で、あなたとあの人の関係性をチェック。30問の質問に答えるだけで、距離感スコアと相性スコアが分かります。
+                  無料ペア診断・仲良さ診断で、あなたとあの人の関係性をチェック。30問の質問に答えるだけで、距離感スコアと相性スコアが分かります。
                 </p>
                 {!isB && (
                   <Button 

@@ -7,23 +7,23 @@
   <!-- トップページ - 距離感診断 -->
   <url>
     <loc>https://duoshindan-1.pages.dev/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-01-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
+
   <!-- タイプ別解説ページ - ペアタイプ -->
   <url>
     <loc>https://duoshindan-1.pages.dev/note</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-01-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-  
+
   <!-- FAQページ -->
   <url>
     <loc>https://duoshindan-1.pages.dev/faq</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2026-01-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
