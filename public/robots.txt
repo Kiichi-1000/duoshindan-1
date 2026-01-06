@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://duoshindan-1.pages.dev/sitemap.xml
+Sitemap: https://duo.synthera.jp/sitemap.xml
 
 # Disallow private pages (if any)
 # Disallow: /private/

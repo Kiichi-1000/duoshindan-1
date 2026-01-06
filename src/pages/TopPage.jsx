@@ -116,7 +116,7 @@ const TopPage = () => {
             "name": "距離感診断",
             "alternateName": ["ペア診断", "仲良さ診断"],
             "description": "30問の質問で二人の距離感と相性を診断する無料ペア診断サイト。カップルや友達同士で使える距離感診断・ペア診断・仲良さ診断。",
-            "url": typeof window !== 'undefined' ? window.location.origin : 'https://yourdomain.com',
+            "url": typeof window !== 'undefined' ? window.location.origin : 'https://duo.synthera.jp',
             "applicationCategory": "UtilityApplication",
             "operatingSystem": "Web Browser",
             "offers": {

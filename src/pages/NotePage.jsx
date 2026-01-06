@@ -51,7 +51,7 @@ const NotePage = () => {
             "@type": "Article",
             "headline": "ペアタイプ別解説 | 距離感診断",
             "description": "距離感診断の10種類のペアタイプを詳しく解説。他人行儀ペア、敬語ギリ卒ペア、ゆる友だちペアから一心同体ペアまで、それぞれの特徴とアドバイスを紹介します。",
-            "url": `${typeof window !== 'undefined' ? window.location.origin : 'https://yourdomain.com'}/note`,
+            "url": `${typeof window !== 'undefined' ? window.location.origin : 'https://duo.synthera.jp'}/note`,
             "keywords": "ペアタイプ,距離感タイプ,他人行儀ペア,敬語ギリ卒ペア,ゆる友だちペア,距離感診断,ペア診断,仲良さ診断,相性診断",
             "articleSection": "ペアタイプ解説"
           })}

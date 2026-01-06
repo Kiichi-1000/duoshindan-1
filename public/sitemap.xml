@@ -6,7 +6,7 @@
   
   <!-- トップページ - 距離感診断 -->
   <url>
-    <loc>https://duoshindan-1.pages.dev/</loc>
+    <loc>https://duo.synthera.jp/</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,7 +14,7 @@
 
   <!-- タイプ別解説ページ - ペアタイプ -->
   <url>
-    <loc>https://duoshindan-1.pages.dev/note</loc>
+    <loc>https://duo.synthera.jp/note</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -22,7 +22,7 @@
 
   <!-- FAQページ -->
   <url>
-    <loc>https://duoshindan-1.pages.dev/faq</loc>
+    <loc>https://duo.synthera.jp/faq</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
