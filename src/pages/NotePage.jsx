@@ -68,27 +68,41 @@ const NotePage = () => {
                 <Card className="overflow-hidden">
                    <div className="bg-gradient-to-r from-pink-500 to-purple-500 p-1"></div>
                    <div className="p-8">
-                      <div className="flex items-center justify-between mb-6">
-                        <h2 className="text-2xl font-bold text-gray-800">{type.name}</h2>
-                        <span className="text-sm font-mono text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
-                          Score: {type.scoreRange[0]}-{type.scoreRange[1]}
-                        </span>
-                      </div>
-                      
-                      <div className="prose max-w-none">
-                         <h3 className="text-lg font-bold text-purple-700 mb-4">{type.note_title}</h3>
-                         <p className="text-gray-600 leading-relaxed mb-6">{type.note_content}</p>
-                         
-                         <div className="bg-gray-50 p-4 rounded-lg">
-                           <h4 className="font-bold text-sm text-gray-700 mb-2">特徴キーワード</h4>
-                           <div className="flex flex-wrap gap-2">
-                             {type.characteristics.map((c, i) => (
-                               <span key={i} className="text-xs bg-white border border-gray-200 px-2 py-1 rounded text-gray-600">
-                                 {c}
-                               </span>
-                             ))}
-                           </div>
-                         </div>
+                      <div className="flex flex-col md:flex-row gap-6">
+                        {/* タイプ画像 */}
+                        <div className="flex-shrink-0">
+                          <img 
+                            src={type.image} 
+                            alt={`${type.name}のイラスト`}
+                            className="w-32 h-32 md:w-40 md:h-40 rounded-xl object-cover shadow-md mx-auto md:mx-0"
+                          />
+                        </div>
+                        
+                        {/* コンテンツ */}
+                        <div className="flex-1">
+                          <div className="flex items-center justify-between mb-4">
+                            <h2 className="text-2xl font-bold text-gray-800">{type.name}</h2>
+                            <span className="text-sm font-mono text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+                              Score: {type.scoreRange[0]}-{type.scoreRange[1]}
+                            </span>
+                          </div>
+                          
+                          <div className="prose max-w-none">
+                             <h3 className="text-lg font-bold text-purple-700 mb-3">{type.note_title}</h3>
+                             <p className="text-gray-600 leading-relaxed mb-4">{type.note_content}</p>
+                             
+                             <div className="bg-gray-50 p-4 rounded-lg">
+                               <h4 className="font-bold text-sm text-gray-700 mb-2">特徴キーワード</h4>
+                               <div className="flex flex-wrap gap-2">
+                                 {type.characteristics.map((c, i) => (
+                                   <span key={i} className="text-xs bg-white border border-gray-200 px-2 py-1 rounded text-gray-600">
+                                     {c}
+                                   </span>
+                                 ))}
+                               </div>
+                             </div>
+                          </div>
+                        </div>
                       </div>
                    </div>
                 </Card>

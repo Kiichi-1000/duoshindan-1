@@ -115,7 +115,14 @@ const ResultPage = () => {
                  </div>
                  <div className="relative z-10 text-center">
                    <div className="mb-6">
-                     <img alt="Pair type illustration" className="w-48 h-48 mx-auto rounded-full object-cover shadow-lg mb-4" src="https://images.unsplash.com/photo-1484071096222-7936a931e094" />
+                     <motion.img 
+                       initial={{ scale: 0.8, opacity: 0 }}
+                       animate={{ scale: 1, opacity: 1 }}
+                       transition={{ duration: 0.5, delay: 0.3 }}
+                       alt={`${pairType.name}のイラスト`} 
+                       className="w-56 h-56 mx-auto rounded-2xl object-cover shadow-lg mb-4" 
+                       src={pairType.image} 
+                     />
                    </div>
                    <h2 className="text-2xl font-bold mb-4 text-purple-800">相性スコア: {formatPercent(compatibilityScorePercent)}%</h2>
                    <div className="flex justify-center gap-8 text-sm font-medium text-gray-600 bg-gray-50 p-4 rounded-xl">
