@@ -2,6 +2,7 @@
 # 静的アセットはそのまま配信し、それ以外はSPAとして index.html にフォールバック
 
 /assets/*  /assets/:splat  200
+/images/*  /images/:splat  200
 /favicon.svg  /favicon.svg  200
 /robots.txt  /robots.txt  200
 /sitemap.xml  /sitemap.xml  200

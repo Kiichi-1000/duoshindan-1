@@ -58,9 +58,25 @@ if (fs.existsSync('public/favicon.svg')) copyFile('public/favicon.svg', 'favicon
 if (fs.existsSync('public/robots.txt')) copyFile('public/robots.txt', 'robots.txt');
 if (fs.existsSync('public/sitemap.xml')) copyFile('public/sitemap.xml', 'sitemap.xml');
 
+// images をルート直下へもコピー（ビルド成果物が配信されない環境対策）
+const publicImagesDir = path.resolve('public/images');
+const rootImagesDir = path.resolve('images');
+function copyDirRecursive(srcDir, destDir) {
+  if (!fs.existsSync(srcDir)) return;
+  ensureDir(destDir);
+  for (const entry of fs.readdirSync(srcDir, { withFileTypes: true })) {
+    const srcPath = path.join(srcDir, entry.name);
+    const destPath = path.join(destDir, entry.name);
+    if (entry.isDirectory()) copyDirRecursive(srcPath, destPath);
+    else if (entry.isFile()) copyFile(srcPath, destPath);
+  }
+}
+copyDirRecursive(publicImagesDir, rootImagesDir);
+
 console.log('Exported static assets:');
 console.log('- assets/app.js');
 if (cssPath) console.log('- assets/app.css');
 console.log('- favicon.svg, robots.txt, sitemap.xml (if present in public/)');
+if (fs.existsSync(rootImagesDir)) console.log('- images/** (copied from public/images)');
 
 
