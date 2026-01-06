@@ -258,6 +258,9 @@ export default defineConfig({
 		outDir: 'dist',
 		assetsDir: 'assets',
 		rollupOptions: {
+			input: {
+				main: path.resolve(__dirname, './index.prod.html')
+			},
 			external: [
 				'@babel/parser',
 				'@babel/traverse',

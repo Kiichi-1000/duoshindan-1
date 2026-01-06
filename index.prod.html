@@ -42,39 +42,9 @@
 	</head>
 	<body>
 		<div id="root"></div>
-		<!--
-		  公開環境（Cloudflare Pages）でビルド成果物が配信されないケースに備えて、
-		  本番では /assets/app.js を読み込む。
-		  ローカル開発（Vite）では /src/main.jsx を動的 import する。
-		-->
-		<script type="module">
-			const isLocal =
-				location.hostname === 'localhost' ||
-				location.hostname === '127.0.0.1' ||
-				location.hostname === '0.0.0.0';
-
-			if (!isLocal) {
-				// 本番CSSを読み込み（存在しない場合は無視される）
-				const css = document.createElement('link');
-				css.rel = 'stylesheet';
-				css.href = '/assets/app.css';
-				document.head.appendChild(css);
-			}
-
-			const entry = isLocal ? '/src/main.jsx' : '/assets/app.js';
-			import(entry).catch((e) => {
-				console.error('Failed to load entry:', entry, e);
-				const root = document.getElementById('root');
-				if (root) {
-					root.innerHTML =
-						'<div style="padding:16px;font-family:system-ui;">読み込みに失敗しました。ページを再読み込みしてください。</div>';
-				}
-			});
-		</script>
-		<noscript>
-			<div style="padding:16px;font-family:system-ui;">
-				このサイトはJavaScriptが必要です。ブラウザのJavaScriptを有効にしてください。
-			</div>
-		</noscript>
+		<!-- Vite build 用の静的エントリ（本番ビルドで確実にバンドルするため） -->
+		<script type="module" src="/src/main.jsx"></script>
 	</body>
 </html>
+
+
